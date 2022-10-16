@@ -1,11 +1,12 @@
-import { Button, ThemeProvider } from "@mui/material";
+import { Button } from "@chakra-ui/button";
+import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Counter } from "../../../modules/example/presentation/components/Counter/Counter";
 import { appTheme } from "../theme/app-theme";
 
 export const App = () => {
   return (
-    <ThemeProvider theme={appTheme}>
+    <ChakraProvider theme={appTheme}>
       <BrowserRouter>
         <Routes>
           <Route
@@ -14,12 +15,12 @@ export const App = () => {
               <>
                 <Counter />
 
-                <Button variant="contained">Click me</Button>
+                <Button>Click me</Button>
               </>
             }
           />
         </Routes>
       </BrowserRouter>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };

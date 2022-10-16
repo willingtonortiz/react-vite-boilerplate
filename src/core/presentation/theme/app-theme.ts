@@ -1,8 +1,3 @@
-import { green } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import { extendTheme } from "@chakra-ui/react";
 
-export const appTheme = createTheme({
-  palette: {
-    primary: { main: green[400] },
-  },
-});
+export const appTheme = extendTheme({});
