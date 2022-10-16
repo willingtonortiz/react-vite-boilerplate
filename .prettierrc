@@ -1,0 +1,19 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "semi": true,
+  "endOfLine": "lf",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^core/(.*)$",
+    "^domain/(.*)$",
+    "^infra/(.*)$",
+    "^main/(.*)$",
+    "^presentation/(.*)$",
+    "^assets/(.*)$",
+    "^shared/(.*)$",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": ["jsx", "typescript", "decorators-legacy"]
+}
