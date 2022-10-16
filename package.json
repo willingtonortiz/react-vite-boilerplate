@@ -16,6 +16,9 @@
     "prettier": "prettier --write src/**/*.{js,ts,tsx}"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.9",
     "@tanstack/react-query": "^4.8.0",
     "@tippyjs/react": "^4.2.6",
     "axios": "^0.27.2",
