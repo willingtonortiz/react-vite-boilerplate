@@ -1,26 +1,18 @@
-import { Button } from "@chakra-ui/button";
 import { ChakraProvider } from "@chakra-ui/react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Counter } from "../../../modules/example/presentation/components/Counter/Counter";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter } from "react-router-dom";
+import { queryClient } from "../../infrastructure/react-query/query-client";
+import { AppRoutes } from "../AppRoutes/AppRoutes";
 import { appTheme } from "../theme/app-theme";
 
 export const App = () => {
   return (
-    <ChakraProvider theme={appTheme}>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Counter />
-
-                <Button>Click me</Button>
-              </>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </ChakraProvider>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={appTheme}>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 };
