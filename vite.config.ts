@@ -13,5 +13,11 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: ["./vitest/setupTests.ts"],
+    deps: {
+      fallbackCJS: true,
+    },
+  },
+  ssr: {
+    noExternal: ["@chakra-ui/react"],
   },
 });
